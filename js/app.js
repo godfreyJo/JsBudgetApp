@@ -114,7 +114,7 @@ totalExpense(){
 if(this.itemList.length>0){
   total = this.itemList.reduce(function(acc, curr){
     acc += curr.amount;
-    return acc;    
+    return acc;
   }, 0);
 
 }
@@ -145,7 +145,13 @@ expenseForm.addEventListener('submit', function(event){
 
 //expense  click
 
-expenseList.addEventListener('click', function(){});
+expenseList.addEventListener('click', function(event){
+  if(event.target.parentElement.classList.contains('edit-icon')){
+
+  } else if(event.target.parentElement.classList.contains('delete-icon')){
+
+  }
+});
 
 }
 
